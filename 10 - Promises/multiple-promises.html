@@ -25,11 +25,11 @@
   //     console.log(weatherInfo, tweetInfo)
   //   });
 
-  const postsPromise = fetch('https://wesbos.com/wp-json/wp/v2/posts');
+  const nyStationsPromise = fetch('https://mtaapi.herokuapp.com/stations');
   const streetCarsPromise = fetch('http://data.ratp.fr/api/datasets/1.0/search/?q=paris');
 
   Promise
-    .all([postsPromise, streetCarsPromise])
+    .all([nyStationsPromise, streetCarsPromise])
     .then(responses => {
       return Promise.all(responses.map(res => res.json()))
     })
