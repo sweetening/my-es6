@@ -7,13 +7,13 @@
 
 <body>
   <script>
-    function breathe(amount) {
+    function breathe(amt) {
       return new Promise((resolve, reject) => {
-        if (amount < 500) {
-          reject('That is too small of a value');
+        if (amt < 500) {
+          reject(`${amt} is too small!`);
         }
-        setTimeout(() => resolve(`Done for ${amount} ms`), amount);
-      });
+        setTimeout(() => resolve(`Done for ${amt} ms!`), amt)
+      })
     }
 
     function catchErrors(fn) {
