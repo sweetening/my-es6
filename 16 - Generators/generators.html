@@ -7,14 +7,12 @@
 <body>
 <script>
   function* listPeople() {
-    yield 'sanja';
-    yield 'philipp';
-    // let i = 0;
-    // yield i;
-    // i++;
-    // yield i;
-    // i++;
-    // yield i;
+    let i = 0;
+    yield i;
+    i++;
+    yield i;
+    i++;
+    yield i;
   }
 
   const people = listPeople();
