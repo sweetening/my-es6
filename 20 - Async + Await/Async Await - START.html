@@ -7,7 +7,27 @@
 
 <body>
   <script>
+    function breathe(amt) {
+      return new Promise((resolve, reject) => {
+      if (amt < 500) {
+        reject(`${amt} is too small!`);
+      }
+        setTimeout(() => resolve(`Done for ${amt} ms!`), amt)
+      })
+    }
 
+    breathe(1000).then(res => {
+      console.log(res);
+      return breathe(500);
+      }).then(res => {
+        console.log(res);
+      return breathe(200);
+      }).then(res => {
+        console.log(res);
+    }).catch(err => {
+      console.error(err);
+      console.error('OH NO!');
+    })
   </script>
 </body>
 
