@@ -1,12 +1,16 @@
 {
   "env": {
     "es6": true,
-    "browser": true
+    "browser": true,
+    "node": true
   },
-  "extends": "airbnb",
+  "extends": [
+    "airbnb",
+    // "airbnb/hooks"
+  ],
   "rules": {
     "no-console": 0,
     "no-unused-vars": 1
   },
-  "plugins": ["html", "markdown"]
+  // "plugins": ["html", "markdown"]
 }
