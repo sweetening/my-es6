@@ -1,0 +1,13 @@
+{
+  "name": "es6modules",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "flickity": "^2.2.1",
+    "lodash": "^4.17.20",
+    "slug": "^4.0.2",
+    "webpack": "^5.11.0",
+    "webpack-cli": "^4.2.0"
+  }
+}
